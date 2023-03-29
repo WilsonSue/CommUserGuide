@@ -1,3 +1,12 @@
-site_name: My Docs
+site_name: Pycharm Guide
+site_url: https://PycharmGuide.com/
+nav:
+  - Home: index.md
+  - About: about.md
+  - Adding External Library: ExternalLibrary.md
+  - Adding Existing Project: ExistingProject.md
+  - How to Use Debugger: Debugger.md
+  - Troubleshooting: Troubleshooting.md
+  - Glossary: Glossary.md
 theme:
   name: material
