@@ -1,4 +1,4 @@
-# **How to add existing pycharm object**
+# **How to add Existing Pycharm Projects to GitHub :material-tab-plus:**
 
 ## test
 
@@ -12,6 +12,9 @@
 8. Navigate your CLI path to the folder where your project is located. You can do so by selecting the folder then right clicking and selecting the copy as path option in the drop down menu.
 9. Now, go back to your CLI and type cd and paste, then press enter.
 10. Type "git clone" followed by a space and then paste the copied URL of the repository. Hit Enter to clone the repository to your local machine.
+
+> git clone (Paste URL here)
+
 11. Now, open the folder containing your cloned repository in PyCharm.
 12. Drag the files and folders from your project directory into the repository folder in PyCharm. This will add your project files to the Git repository.
 13. Once you have added the files, go to the "Version Control" tool window in PyCharm and click on the "Commit" button.
