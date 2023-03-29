@@ -14,7 +14,7 @@ nav:
   - How to Use Debugger: Debugger.md
   - Troubleshooting: Troubleshooting.md
   - Glossary: Glossary.md
-extra_css: [extra.css]
+
 theme:
   name: material
   logo: /PyCharm_Icon.svg.png
@@ -22,5 +22,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  palette:
+    scheme: slate
+    accent: lime
+    primary: green
 extra:
   homepage: https://PycharmGuide.com/
