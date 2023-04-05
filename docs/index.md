@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+<!-- # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
@@ -14,4 +14,22 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        ...       # Other markdown pages, images and other files. -->
+
+# Introduction
+
+## Intended Users
+
+## Prerequisite Knowledge
+
+## Required Software
+
+## Overview
+
+ The main sections of this guide are listed below:
+
+* [Adding an External Library](ExternalLibrary.md)
+* [Adding an Existing Project to Git](ExistingProject.md)
+* [How to Use the Debugger](Debugger.md)
+* [Troubleshooting](Troubleshooting.md)
+* [Glossary](Glossary.md)
