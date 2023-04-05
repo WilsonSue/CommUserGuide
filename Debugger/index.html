@@ -1,0 +1,652 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Pycharm Guide">
+      
+      
+        <meta name="author" content="Pycharm Guide">
+      
+      
+        <link rel="canonical" href="https://PycharmGuide.com/Debugger/">
+      
+      
+        <link rel="prev" href="../ExistingProject/">
+      
+      
+        <link rel="next" href="../Troubleshooting/">
+      
+      <link rel="icon" href="/PyCharm_Icon.svg.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>How to Use Debugger - Pycharm Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-pycharms-debugger" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://PycharmGuide.com/" title="Pycharm Guide" class="md-header__button md-logo" aria-label="Pycharm Guide" data-md-component="logo">
+      
+  <img src="/PyCharm_Icon.svg.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pycharm Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to Use Debugger
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/WilsonSue/CommUserGuide.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Pycharm Guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://PycharmGuide.com/" title="Pycharm Guide" class="md-nav__button md-logo" aria-label="Pycharm Guide" data-md-component="logo">
+      
+  <img src="/PyCharm_Icon.svg.png" alt="logo">
+
+    </a>
+    Pycharm Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/WilsonSue/CommUserGuide.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Pycharm Guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExternalLibrary/" class="md-nav__link">
+        Adding External Library
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExistingProject/" class="md-nav__link">
+        Adding Existing Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How to Use Debugger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How to Use Debugger
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-the-debugger" class="md-nav__link">
+    Why Use the Debugger?
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use the Debugger?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-select-the-line-you-want-to-examine" class="md-nav__link">
+    1. Select the Line You Want to Examine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-click-on-the-left-side" class="md-nav__link">
+    2. Click on the Left Side
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-click-on-the-debug-button" class="md-nav__link">
+    3. Click on the Debug Button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-the-debug-terminal" class="md-nav__link">
+    4. The Debug Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-stepping-over" class="md-nav__link">
+    5. Stepping Over
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stepping-into" class="md-nav__link">
+    6. Stepping Into
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-stepping-out" class="md-nav__link">
+    7. Stepping Out
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-adding-watches-watches-part-1" class="md-nav__link">
+    8. Adding Watches (Watches Part 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-select-a-line-of-code-watches-part-2" class="md-nav__link">
+    9. Select a Line of Code (Watches Part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-add-watch-to-the-debugger-watches-part-3" class="md-nav__link">
+    10. Add Watch to the Debugger (Watches Part 3)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-the-debugger" class="md-nav__link">
+    Why Use the Debugger?
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use the Debugger?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-select-the-line-you-want-to-examine" class="md-nav__link">
+    1. Select the Line You Want to Examine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-click-on-the-left-side" class="md-nav__link">
+    2. Click on the Left Side
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-click-on-the-debug-button" class="md-nav__link">
+    3. Click on the Debug Button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-the-debug-terminal" class="md-nav__link">
+    4. The Debug Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-stepping-over" class="md-nav__link">
+    5. Stepping Over
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stepping-into" class="md-nav__link">
+    6. Stepping Into
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-stepping-out" class="md-nav__link">
+    7. Stepping Out
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-adding-watches-watches-part-1" class="md-nav__link">
+    8. Adding Watches (Watches Part 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-select-a-line-of-code-watches-part-2" class="md-nav__link">
+    9. Select a Line of Code (Watches Part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-add-watch-to-the-debugger-watches-part-3" class="md-nav__link">
+    10. Add Watch to the Debugger (Watches Part 3)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="how-to-use-pycharms-debugger"><strong>How to Use PyCharm's Debugger</strong></h1>
+<h2 id="why-use-the-debugger">Why Use the Debugger?</h2>
+<p>If you have a large block of code that ends up being very complex, it is useful to look at the code one line at a time. It may also be useful to look at the state of your variables, especially within a recursive function.</p>
+<p>PyCharm's debugger is easy to use once you know what everything does. It also works the same way in other JetBrains IDEs like CLion (C/C++) and IntelliJ (Java).</p>
+<h3 id="1-select-the-line-you-want-to-examine">1. Select the Line You Want to Examine</h3>
+<p>Here, we want to look at code starting from line 353.
+ <img alt="debugger marker" src="../Screenshot_15.png" /></p>
+<h3 id="2-click-on-the-left-side">2. Click on the Left Side</h3>
+<p>A red dot will appear next to the line's number.
+ This red dot tells the debugger where to stop and examine the code.
+ If you don't do this, the code will run normally like when you press the run button.
+ <img alt="debugger marker" src="../Screenshot_8.png" /></p>
+<h3 id="3-click-on-the-debug-button">3. Click on the Debug Button</h3>
+<p>The debug button is to the right of the run button. If you have done the previous step, a terminal will appear.</p>
+<p><img alt="debug button" src="../Screenshot_1.png" />
+ <img alt="debugger terminal" src="../Screenshot_2.png" /></p>
+<p>Now the current line you are examining will be highlighted.<br />
+ The next step will give you a short explanation of the terminal.  </p>
+<h3 id="4-the-debug-terminal">4. The Debug Terminal</h3>
+<p>At the top left corner you will see two tabs, the debugger and the console.
+ You will also see the rerun and stop functions along the left side.
+ <img alt="debugger/console" src="../Screenshot_9.png" /></p>
+<p>The debugger tab will show the values of any variables created.<br />
+ The variables are also displayed in orange text on the line of code they are assigned.
+ <img alt="debugger variable" src="../Screenshot_6.png" /></p>
+<p>The console is useful for user inputs and print functions.<br />
+ When you reach an input function, you can view the terminal to provide an input.<br />
+ You will know when you can provide input when you see the green "&gt;?" symbol.<br />
+<img alt="console input" src="../Screenshot_10.png" /></p>
+<p>You will also see five buttons displaying blue arrows near the top of the terminal.<br />
+<img alt="debugger buttons" src="../Screenshot_11.png" /><br />
+ The next three steps will tell you about the functions you will use the most while in the debugger.</p>
+<h3 id="5-stepping-over">5. Stepping Over</h3>
+<p>If you click the "step over" button, the debugger immediately examines the next line of code.<br />
+<img alt="step over button" src="../Screenshot_3.png" /><br />
+ It doesn't matter if there is a function, the debugger will ignore any and all calls to other lines of code and will "step over" to the next line in the program.<br />
+<img alt="step over demo" src="../LWR_Recording%20%285%29.gif" /></p>
+<h3 id="6-stepping-into">6. Stepping Into</h3>
+<p>If you click the "step into" button when examining a line with a function call, the debugger will "step into" that function.<br />
+<img alt="step into button" src="../Screenshot_4.png" /><br />
+ This means you can examine the code that runs within a function call. This is helpful when you are calling multiple functions within one function (eg. main). If there are no function calls in the current line, "step into" simply acts like "step over".<br />
+<img alt="step into demo" src="../LWR_Recording%20%286%29.gif" /></p>
+<h3 id="7-stepping-out">7. Stepping Out</h3>
+<p>If you click the "step out" button, the debugger will "step out" of the current function.<br />
+<img alt="step out button" src="../Screenshot_5.png" /></p>
+<p>This is useful when you are only looking at one part of a long function and need to return to the function call quickly.
+ <img alt="step out demo" src="../LWR_Recording%20%2816%29.gif" /></p>
+<h3 id="8-adding-watches-watches-part-1">8. Adding Watches (Watches Part 1)</h3>
+<p>Sometimes you need to check a value not assigned to a variable.
+ What you need to add is a watch.</p>
+<p><img alt="variable section" src="../Screenshot_12.png" /></p>
+<p>Watches act like regular variables but unlike variables, they are not explicitly assigned.
+ These next steps will show you how to add your own watches to the debug console.</p>
+<h3 id="9-select-a-line-of-code-watches-part-2">9. Select a Line of Code (Watches Part 2)</h3>
+<p>Highlight a line of code that returns a value and copy it.<br />
+ These are most commonly found in if statements that call functions though they can be found in other places.<br />
+<img alt="watch candidate" src="../Screenshot_13.png" />  </p>
+<h3 id="10-add-watch-to-the-debugger-watches-part-3">10. Add Watch to the Debugger (Watches Part 3)</h3>
+<p>Paste that line of code in the text input line of the variables section of the debugger and click "Add to Watches".
+ <img alt="added watch" src="../Screenshot_14.png" /></p>
+<p>You have successfully added a watch to your variables list!<br />
+ Here is a video guide on how to do it.
+ <img alt="watch demo" src="../LWR_Recording%20%2815%29.gif" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
