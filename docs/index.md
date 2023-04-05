@@ -18,11 +18,43 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 # Introduction
 
+Welcome to our Introduction to PyCharm tutorial! In this comprehensive guide, we'll explore various essential features and functionalities within the powerful PyCharm Integrated Development Environment (IDE). Our primary focus will be on the following topics:
+
+- Adding external libraries, adding existing projects to Git, and how to use the debugger.
+
+- We'll also cover troubleshooting and glossary terms.
+
+By the end of this tutorial, you'll gain a solid understanding of basic PyCharm functionalities, allowing you to elevate your programming skills and streamline your development process.
+
 ## Intended Users
+
+The intended users for this pycharm guide are for users who:
+
+- Are new to software development.
+
+- Currently a student in post-secondary.
 
 ## Prerequisite Knowledge
 
+Required prerequisite knowledge for this tutorial includes:
+
+- Knowing how to navigate files on your computer.
+
+- Knowing how to enter commands in a terminal.
+
 ## Required Software
+
+This tutorial requires you to have:
+
+- A windows device.
+
+- Python 3.10+ installed on your computer.
+
+- PyCharm installed on your computer.
+
+- A GitHub account.
+
+- Github CLI installed on your computer.
 
 ## Overview
 
