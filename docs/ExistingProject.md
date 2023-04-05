@@ -1,7 +1,22 @@
 # **How to add Existing Pycharm Projects to GitHub :material-tab-plus:**
 
+## Why add your project to GitHub?
+
+In group projects, as a software developer it's quintessential to share your work with others. 
+
+- Thus, adding your project to github allows you to share your work with others and collaborate with them. 
+
+- Also, github allows users to revert changes, track the code history, and have multiple versions of a project.
+
+- Lastly, it's a portfolio for your projects which can be shared to potential employers.
+
+Now that you've seen the benefits, let's get started!
+
+## How to add your existing PyCharm project to GitHub
+
 1. The first step is to enter the GitHub website (<https://github.com/>).
-2. Next is to login/signup if you don't have an account already.
+
+2. Next is to login / signup if you don't have an account already.
 3. Now that you've logged in, click the "+" sign on the top right corner of the page and you’ll see a drop down menu. Click on the first option that says  “New repository”.
 
 ![New Repository](ExistingProject1.png)
