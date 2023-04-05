@@ -8,6 +8,9 @@
 
 ### 1. Select the Line You Want to Examine
 
+ Here, we want to look at code starting from line 353.
+ ![debugger marker](Screenshot_15.png)
+
 ### 2. Click on the Left Side
 
  A red dot will appear next to the line's number.
