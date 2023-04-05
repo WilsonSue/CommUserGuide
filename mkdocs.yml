@@ -11,7 +11,7 @@ nav:
   - Home: index.md
   - Adding External Library: ExternalLibrary.md
   - Adding Existing Project: ExistingProject.md
-  - How to Use Debugger: Debugger.md
+  - How to Use the Debugger: Debugger.md
   - Troubleshooting: Troubleshooting.md
   - Glossary: Glossary.md
 
