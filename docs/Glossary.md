@@ -24,3 +24,4 @@
 | .gitignore | A file that tells Git which files to ignore |
 | Variable | A container for a value |
 | Virtual Environment | A tool that helps you keep dependencies required by different projects separate by creating isolated Python virtual environments for them |
+| Source code management | A system that records changes to a file or set of files over time so that you can recall specific versions later |
