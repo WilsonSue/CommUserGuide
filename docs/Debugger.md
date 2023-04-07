@@ -1,5 +1,9 @@
 # **How to Use PyCharm's Debugger**
 
+## What is the Debugger?
+
+ The debugger is a helpful tool included in all JetBrains IDEs. It gives you the ability to analyze at your code line by line to potentially find out what's wrong with it.
+
 ## Why Use the Debugger?
 
   If you have a large block of code that ends up being very complex, it is useful to look at the code one line at a time. It may also be useful to look at the state of your variables, especially within a recursive function.
@@ -14,13 +18,14 @@
 ### 2. Click on the Left Side
 
  A red dot will appear next to the line's number.
- This red dot tells the debugger where to stop and examine the code.
- If you don't do this, the code will run normally like when you press the run button.
+ This red dot is called a _breakpoint_.  
+ It tells the debugger where to stop and examine the code.
  ![debugger marker](Screenshot_8.png)
 
 ### 3. Click on the Debug Button
 
- The debug button is to the right of the run button. If you have done the previous step, a terminal will appear.
+ The debug button is to the right of the run button. If you have done the previous step, a terminal will appear.  
+ If you didn't create a breakpoint, clicking the debug button will be the same as clicking the run button.
 
  ![debug button](Screenshot_1.png)
  ![debugger terminal](Screenshot_2.png)
@@ -45,6 +50,7 @@
 
  You will also see five buttons displaying blue arrows near the top of the terminal.  
  ![debugger buttons](Screenshot_11.png)  
+ Go ahead and start to debug some of your own code if you haven't already.  
  The next three steps will tell you about the functions you will use the most while in the debugger.
 
 ### 5. Stepping Over
@@ -76,13 +82,17 @@
 
  ![variable section](Screenshot_12.png)
 
- Watches act like regular variables but unlike variables, they are not explicitly assigned.
+ Watches act like regular variables in the sense that they store values.
+ Unlike variables, watches are not explicitly assigned so they don't show up naturally in the terminal.
+ We will have to manually input these into the debugger terminal.
+
+ Start debugging your code again if you have finished already.
  These next steps will show you how to add your own watches to the debug console.
 
 ### 9. Select a Line of Code (Watches Part 2)
 
  Highlight a line of code that returns a value and copy it.  
- These are most commonly found in if statements that call functions though they can be found in other places.  
+ These are commonly found in "if" statements that call functions but, you can find these in other places too.  
  ![watch candidate](Screenshot_13.png)  
 
 ### 10. Add Watch to the Debugger (Watches Part 3)
@@ -93,3 +103,7 @@
  You have successfully added a watch to your variables list!  
  Here is a video guide on how to do it.
  ![watch demo](LWR_Recording (15).gif)
+
+## End of Debugger Tutorial
+
+  Now you know most of the basic functions of PyCharm's debugger!
