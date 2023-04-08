@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Use Debugger - Pycharm Guide</title>
+        <title>Using the Debugger - Pycharm Guide</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Use Debugger
+              Using the Debugger
             
           </span>
         </div>
@@ -271,12 +271,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to Use Debugger
+          Using the Debugger
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to Use Debugger
+        Using the Debugger
       </a>
       
         
@@ -293,6 +293,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-debugger" class="md-nav__link">
+    What is the Debugger?
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#why-use-the-debugger" class="md-nav__link">
@@ -374,6 +381,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-of-debugger-tutorial" class="md-nav__link">
+    End of Debugger Tutorial
+  </a>
   
 </li>
       
@@ -442,6 +456,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-the-debugger" class="md-nav__link">
+    What is the Debugger?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-use-the-debugger" class="md-nav__link">
     Why Use the Debugger?
   </a>
@@ -524,6 +545,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#end-of-debugger-tutorial" class="md-nav__link">
+    End of Debugger Tutorial
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -543,6 +571,8 @@
 
 
 <h1 id="how-to-use-pycharms-debugger"><strong>How to Use PyCharm's Debugger</strong></h1>
+<h2 id="what-is-the-debugger">What is the Debugger?</h2>
+<p>The debugger is a helpful tool included in all JetBrains IDEs. It gives you the ability to analyze at your code line by line to potentially find out what's wrong with it.</p>
 <h2 id="why-use-the-debugger">Why Use the Debugger?</h2>
 <p>If you have a large block of code that ends up being very complex, it is useful to look at the code one line at a time. It may also be useful to look at the state of your variables, especially within a recursive function.</p>
 <p>PyCharm's debugger is easy to use once you know what everything does. It also works the same way in other JetBrains IDEs like CLion (C/C++) and IntelliJ (Java).</p>
@@ -551,11 +581,12 @@
  <img alt="debugger marker" src="../Screenshot_15.png" /></p>
 <h3 id="2-click-on-the-left-side">2. Click on the Left Side</h3>
 <p>A red dot will appear next to the line's number.
- This red dot tells the debugger where to stop and examine the code.
- If you don't do this, the code will run normally like when you press the run button.
+ This red dot is called a <em>breakpoint</em>.<br />
+ It tells the debugger where to stop and examine the code.
  <img alt="debugger marker" src="../Screenshot_8.png" /></p>
 <h3 id="3-click-on-the-debug-button">3. Click on the Debug Button</h3>
-<p>The debug button is to the right of the run button. If you have done the previous step, a terminal will appear.</p>
+<p>The debug button is to the right of the run button. If you have done the previous step, a terminal will appear.<br />
+ If you didn't create a breakpoint, clicking the debug button will be the same as clicking the run button.</p>
 <p><img alt="debug button" src="../Screenshot_1.png" />
  <img alt="debugger terminal" src="../Screenshot_2.png" /></p>
 <p>Now the current line you are examining will be highlighted.<br />
@@ -573,6 +604,7 @@
 <img alt="console input" src="../Screenshot_10.png" /></p>
 <p>You will also see five buttons displaying blue arrows near the top of the terminal.<br />
 <img alt="debugger buttons" src="../Screenshot_11.png" /><br />
+ Go ahead and start to debug some of your own code if you haven't already.<br />
  The next three steps will tell you about the functions you will use the most while in the debugger.</p>
 <h3 id="5-stepping-over">5. Stepping Over</h3>
 <p>If you click the "step over" button, the debugger immediately examines the next line of code.<br />
@@ -593,11 +625,14 @@
 <p>Sometimes you need to check a value not assigned to a variable.
  What you need to add is a watch.</p>
 <p><img alt="variable section" src="../Screenshot_12.png" /></p>
-<p>Watches act like regular variables but unlike variables, they are not explicitly assigned.
+<p>Watches act like regular variables in the sense that they store values.
+ Unlike variables, watches are not explicitly assigned so they don't show up naturally in the terminal.
+ We will have to manually input these into the debugger terminal.</p>
+<p>Start debugging your code again if you have finished already.
  These next steps will show you how to add your own watches to the debug console.</p>
 <h3 id="9-select-a-line-of-code-watches-part-2">9. Select a Line of Code (Watches Part 2)</h3>
 <p>Highlight a line of code that returns a value and copy it.<br />
- These are most commonly found in if statements that call functions though they can be found in other places.<br />
+ These are commonly found in "if" statements that call functions but, you can find these in other places too.<br />
 <img alt="watch candidate" src="../Screenshot_13.png" />  </p>
 <h3 id="10-add-watch-to-the-debugger-watches-part-3">10. Add Watch to the Debugger (Watches Part 3)</h3>
 <p>Paste that line of code in the text input line of the variables section of the debugger and click "Add to Watches".
@@ -605,6 +640,8 @@
 <p>You have successfully added a watch to your variables list!<br />
  Here is a video guide on how to do it.
  <img alt="watch demo" src="../LWR_Recording%20%2815%29.gif" /></p>
+<h2 id="end-of-debugger-tutorial">End of Debugger Tutorial</h2>
+<p>Now you know most of the basic functions of PyCharm's debugger!</p>
 
 
 
