@@ -8,4 +8,4 @@ This page contains common issues and their solutions for PyCharm.
 | File Text is red| Untracked File|Go to the commit section and add file to either commit or commit and push.|
 | Commit and Push button is greyed out| No files to commit|Add files to the commit section|
 | No Commit section | Not logged into github or Not in a git repository|Log into github in PyCharm and make sure you're in a git repository|
-| ![run/debug config](Screenshot_16.png) ![main function](Screenshot_17.png)   | PyCharm not running/debugging your current file        | Select "current file" in the run/debug menu.  Alternatively, just run the file's _main function_ and it should be added to the run/debug configurations.      |
+| PyCharm not running/debugging your current file   | The run/debug config is set to the wrong file ![run/debug config](Screenshot_16.png)  | Select "current file" in the run/debug menu.  Alternatively, just run the file's _main function_ and it should be added to the run/debug configurations.      |
