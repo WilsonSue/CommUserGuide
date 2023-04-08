@@ -1,5 +1,15 @@
 # Overview of PyCharm User Documentation
 
+Welcome our Pycharm guide. We've designed this guide to help you navigate and utilize the powerful features of PyCharm, a popular integrated development environment (IDE) for Python projects. Our goal is to provide you with a comprehensive guide that focuses on key topics that are essential for first-time users of JetBrains IDEs, as well as best practices for working collaboratively.
+
+We will cover the following topics in this documentation:
+
+Collaborating on the same document remotely
+Creating a user guide using our experience with PyCharm
+Utilizing MkDocs for a customizable, dynamic layout
+Writing documentation pages in Markdown
+Employing VS Code to create and preview the user guide
+
 ## How We Worked Together
 
  In order to work on the same document from home, we used Git and Github to push our changes to the main branch.  
