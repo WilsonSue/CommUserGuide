@@ -24,6 +24,8 @@
 
  Both of us used VS Code to create each markdown file. We previewed our guide by serving it through MkDocs.
 
-
-
 ## Conclusion
+
+In conclusion, our team successfully collaborated to create a comprehensive PyCharm user documentation, leveraging various tools and technologies. By utilizing Git and GitHub for version control and collaboration, we were able to effectively work together remotely. Communication through Discord played a crucial role in keeping each other informed and avoiding conflicts.
+
+Overall, the combination of efficient teamwork, effective communication, and the utilization of appropriate tools and technologies resulted in the creation of a helpful and informative PyCharm user guide that will assist beginners in navigating and understanding the features and functionalities of this powerful IDE. :joy:
