@@ -14,13 +14,13 @@ Start off with finding the External Library you wish to add. In this tutorial, I
 
 To do this, click on "File" in the top left menu bar, and click on "Settings" with the wrench symbol beside it.
 
-![Settings](ExternalLibrary1.png)
+![Settings](ExternalLibrary1.gif)
 
 ## 4. Enter the Python Interpreter menu
 
 The next step is to click on the "Project: Project name" located on the left-hand menu. Under “Project Settings”, select the "Python Interpreter" text highlighted in blue. Note that Project name is substituted with the name of your Project.
 
-![Installed Packages](ExternalLibrary2.png)
+![Installed Packages](ExternalLibrary2.gif)
 
 ## 5. Click on the "+" button
 
@@ -36,24 +36,20 @@ In the "Available Packages" window, type in the name of the package you want to 
 
 Once you've found the package, select it. Note that we suggest you tick the bar that says “Install the user’s site packages directory (C:\Users\User\LocationOfPythonFiles)”. This is so that you can locate your package along with your other packages in case you want to find it.
 
-![Install Packages](ExistingLibrary4.png)
-
 ## 8. Install the External Library
 
 Click on the "Install Package" button in the bottom left corner.
 
-![Install Packages](ExistingLibrary5.png)
+![Install Packages](ExternalLibrary5.gif)
 
 ## 9. Wait for the External Library to install
 
 PyCharm will now install the package for you. The progress can be seen at the bottom of the PyCharm window.
 
-![Install Packages](ExistingLibrary6.png)
-
 ## Double Check if the External Library is installed
 
 When the package is finished installing. The package should be added to the list with the modules that you’ve already had. You can also make sure if the packages are properly installed by typing “import (package name)” into your project and the module name should appear in the drop down menu.
 
-![Install Packages](ExistingLibrary7.png)
+![Install Packages](ExternalLibrary6.gif)
 
 Amazing:smirk:! You can now use the new external library in your PyCharm project :book:. Note that if you're using virtual environments,make sure that you can activate the correct environment before installing the package

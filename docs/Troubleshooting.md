@@ -1,5 +1,7 @@
 # Troubleshooting
 
+This page contains common issues and their solutions for PyCharm.
+
 | Issue      | Potential Issues | Solutions |
 | ----------- | ----------- |----------- |
 | Failure to connect to Github port| Connection refused|Check your wifi connection or if you're properly signed into github on the terminal|
