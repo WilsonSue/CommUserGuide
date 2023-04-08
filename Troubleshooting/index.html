@@ -262,7 +262,7 @@
   
     <li class="md-nav__item">
       <a href="../Debugger/" class="md-nav__link">
-        How to Use Debugger
+        Using the Debugger
       </a>
     </li>
   
@@ -345,6 +345,7 @@
 
 
 <h1 id="troubleshooting">Troubleshooting</h1>
+<p>This page contains common issues and their solutions for PyCharm.</p>
 <table>
 <thead>
 <tr>
@@ -355,14 +356,29 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Commit File" src="../ExistingProjectProblemOne.png" /></td>
+<td>Failure to connect to Github port</td>
 <td>Connection refused</td>
 <td>Check your wifi connection or if you're properly signed into github on the terminal</td>
 </tr>
 <tr>
-<td><img alt="Commit File" src="../ExistingProjectProblemTwo.png" /></td>
-<td>Uncommitted File</td>
+<td>File Text is red</td>
+<td>Untracked File</td>
 <td>Go to the commit section and add file to either commit or commit and push.</td>
+</tr>
+<tr>
+<td>Commit and Push button is greyed out</td>
+<td>No files to commit</td>
+<td>Add files to the commit section</td>
+</tr>
+<tr>
+<td>No Commit section</td>
+<td>Not logged into github or Not in a git repository</td>
+<td>Log into github in PyCharm and make sure you're in a git repository</td>
+</tr>
+<tr>
+<td>PyCharm not running/debugging your current file</td>
+<td>The run/debug config is set to the wrong file <img alt="run/debug config" src="../Screenshot_16.png" /></td>
+<td>Select "current file" in the run/debug menu.  Alternatively, just run the file's <em>main function</em> and it should be added to the run/debug configurations.</td>
 </tr>
 </tbody>
 </table>
