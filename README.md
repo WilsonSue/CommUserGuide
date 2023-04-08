@@ -9,6 +9,9 @@
 
 ### Using MkDocs
 
+ The theme of our user guide was provided via [MaterialforMkDocs](https://squidfunk.github.io/mkdocs-material/).  
+ MkDocs is highly customizable with a dynamic layout.
+
 ### Using Markdown
 
  The pages of the user guide were written in markdown. To review markdown, we followed tutorials from [markdowntutorial.com](www.markdowntutorial.com).
